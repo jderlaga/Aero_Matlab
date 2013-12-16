@@ -67,7 +67,7 @@ else
   cli = 0.15*l;
   xf = p/2;
   
-  m = fzero( @(m)m*(1-sqrt(m/3))-xf, 0.2 );
+  m = fzero( @(m)m*(1-sqrt(m/3))-xf, [0 1] );
   q = (3*m - 7*m^2 + 8*m^3 - 4*m^4)/sqrt(m-m^2) ...
     - 1.5*(1-2*m)*(pi/2 - asin(1-2*m));
   
